@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Tools } from "./tools";
 import { StudyBanner, StudyDisclosure } from "./study";
 import { CategoryStrip, OrderPanel, Disclaimer } from "./modules";
-import { PHOTOS, APP_URL, PLAY_URL } from "../bands/bands";
+import { PHOTOS } from "../bands/bands";
 
 /**
  * The shell: a brand bar with the store and the order, a sticky category
@@ -35,7 +35,9 @@ export function Page({ children }: { children: ReactNode }) {
       </div>
       <StudyDisclosure>
         <details className="credits"><summary>Photograph credits</summary><ul>{Object.entries(PHOTOS).filter(([, p]) => p.exact).map(([k, p]) => <li key={k}><a href={p.page}>{p.shows ?? k}</a> — {p.credit}, {p.licence}.</li>)}</ul></details>
-        <p>To order, the real Taco Bell app is on the <a href={APP_URL}>App Store</a> and <a href={PLAY_URL}>Google Play</a>.</p>
+        {/* Named, not linked: on a page styled as a shop, a link to download an
+            app adds to what Safe Browsing reads as social engineering (2026-10). */}
+        <p>Real orders go through Taco Bell's own app, on the App Store and Google Play. This study names the app but does not link to it.</p>
       </StudyDisclosure>
     </>
   );

@@ -317,6 +317,11 @@ of signing in.
   nothing; the order lives on this page only"), and no step of the order asks
   for a name, phone, address or payment. The customiser has only radio
   buttons and checkboxes.
+- The closing disclosure names Taco Bell's own app and the App Store and
+  Google Play in text, without links (`src/lib/Page.tsx`); the `APP_URL` and
+  `PLAY_URL` constants are gone from `src/bands/bands.tsx`. As in GIFbank,
+  the page names the reference's app but does not link to it. No
+  `apps.apple.com` or `play.google.com` address may appear in `dist`.
 
 **Never bring back**
 - A sign-in, log-in, sign-up or create-account control or label, in the
@@ -325,4 +330,7 @@ of signing in.
   personal data (`autoComplete` of `email`, `name`, `given-name`,
   `family-name`, `tel`, `street-address`, `postal-code` or `cc-*`). Checkout
   stays a button that sends nothing: no contact, delivery or payment step.
+- A control or link that reads as paying or downloading beyond Checkout,
+  which stays as it is: no Pay or Download button, and no link to an app
+  store or an app download, the reference's or anyone else's.
 - A link to a real login or account page, the reference's or anyone else's.

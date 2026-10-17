@@ -9,10 +9,6 @@ import { Customizer, BoxView, BuildView } from "../lib/Customizer";
 import { money, byId, BOXES, BUILD, LISTS, inCategory, type Item, type Category, type Box } from "../menu";
 import photos from "../photos.json";
 
-/** The real Taco Bell app, where the reference's "Order" controls lead. */
-export const APP_URL = "https://apps.apple.com/us/app/taco-bell-fast-food-deals/id497387361";
-export const PLAY_URL = "https://play.google.com/store/apps/details?id=com.tacobell.ordering";
-
 /**
  * A category is a band: its items as squares, the first in the hero. An
  * item's square is a photograph of the real item (a third party's, from
