@@ -16,7 +16,7 @@ panel; `src/lib/Page.tsx` the shell; `src/photos.json` the photographs'
 credits and whether each shows the exact item. Read `docs/program/PROGRAM.md`,
 then `STUDY-BRIEF.md`, then `README.md`.
 
-Live at https://gregoryedgerton.github.io/golden-grids-study-10-tacobell/;
+Live at https://gregoryedgerton.github.io/golden-grids-study-10-gifbell/;
 pushing to `main` deploys.
 
 ## Rules that are not negotiable
@@ -334,3 +334,5 @@ of signing in.
   which stays as it is: no Pay or Download button, and no link to an app
   store or an app download, the reference's or anyone else's.
 - A link to a real login or account page, the reference's or anyone else's.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-10-tacobell` to `golden-grids-study-10-gifbell`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.

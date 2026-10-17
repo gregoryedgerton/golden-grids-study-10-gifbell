@@ -2,7 +2,7 @@ GIFcommit00009
 
 # Layout study — Taco Bell's food menu, as GIFbell
 
-**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-10-tacobell/`](https://gregoryedgerton.github.io/golden-grids-study-10-tacobell/)
+**Live:** [`https://gregoryedgerton.github.io/golden-grids-study-10-gifbell/`](https://gregoryedgerton.github.io/golden-grids-study-10-gifbell/)
 
 An unaffiliated layout study. It rebuilds Taco Bell's online food menu —
 [tacobell.com/food](https://www.tacobell.com/food), its category pages
@@ -151,3 +151,5 @@ npm run dev
 `npm run build` type-checks and builds to `dist/`; pushing to `main` deploys
 to GitHub Pages. The library is consumed from npm at its published version,
 never linked locally.
+
+- **Address (2026-10-17, Greg).** The repository moved from `golden-grids-study-10-tacobell` to `golden-grids-study-10-gifbell`, so the reference's name is no longer in the study's web address (a step against the Safe Browsing flag on the shared origin); the old address no longer serves anything.
