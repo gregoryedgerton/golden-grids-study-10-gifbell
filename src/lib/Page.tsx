@@ -19,7 +19,9 @@ export function Page({ children }: { children: ReactNode }) {
         <div className="wrap brand__row">
           <a className="wordmark" href="./index.html"><span className="wordmark__mark" aria-hidden="true">G</span>GIFbell</a>
           <p className="brand__store">Pickup · Sample store · Prices as listed</p>
-          <ul className="brand__links"><li aria-current="page">Menu</li><li>Rewards</li><li>Locations</li><li>Sign in</li></ul>
+          {/* The reference's Sign in is left out: a sign-in label in a brand's
+              header reads as phishing to Safe Browsing. */}
+          <ul className="brand__links"><li aria-current="page">Menu</li><li>Rewards</li><li>Locations</li></ul>
         </div>
       </header>
       <CategoryStrip />

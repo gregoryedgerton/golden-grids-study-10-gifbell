@@ -298,3 +298,31 @@ opened in StackBlitz at `https://stackblitz.com/~/github.com/gregoryedgerton/gol
 - Do not append `?file=` to the `~/github.com` link; it made the IDE fail to
   start in testing. The classic `/github/` importer accepts `?file=` but waits
   on a WebSocket and can stall at "Cloning repo from GitHub".
+
+## Safe Browsing remediation (2026-10)
+
+On 2026-10-17 Google Safe Browsing flagged the whole origin,
+gregoryedgerton.github.io, as social engineering: every study and the
+marketing site. The first trigger was the demo bank sign-in in Study 19
+(GIFbank), since removed. The heuristic reads appearance, not behaviour, and a
+brand-styled header with a sign-in label adds to the signal even when the
+label does nothing, so every study drops whatever looks like signing in or
+collecting personal data. "Account matter" in the standard above stops short
+of signing in.
+
+**What changed here**
+- The brand bar's links no longer end in Sign in (`src/lib/Page.tsx`); Menu,
+  Rewards and Locations remain.
+- Checked, unchanged: Checkout places nothing and says so ("Checkout sends
+  nothing; the order lives on this page only"), and no step of the order asks
+  for a name, phone, address or payment. The customiser has only radio
+  buttons and checkboxes.
+
+**Never bring back**
+- A sign-in, log-in, sign-up or create-account control or label, in the
+  brand bar or anywhere else, even as plain text for show.
+- A user name, password or verification field, or an input that autofills
+  personal data (`autoComplete` of `email`, `name`, `given-name`,
+  `family-name`, `tel`, `street-address`, `postal-code` or `cc-*`). Checkout
+  stays a button that sends nothing: no contact, delivery or payment step.
+- A link to a real login or account page, the reference's or anyone else's.
